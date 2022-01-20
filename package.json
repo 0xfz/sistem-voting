@@ -1,0 +1,17 @@
+{
+  "name": "sistem-voting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && tsc",
+    "build:all": "npm run build:client && npm run build:server && npm run build",
+    "build": "copyfiles -u 2 \"./server/dist/**/*.*\" \"./server/build\" && copyfiles -u 2 \"./client/dist/**/*.*\" \"./server/build/public\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
